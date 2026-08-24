@@ -385,7 +385,13 @@ const LESSONS = [
     {type:"mc", q:"Übersetze in einen Term: „Eine Zahl, vermindert um 6, dann verdoppelt“", options:["2x − 6","2(x − 6)","(x − 6)/2","x − 6·2"], correct:1,
       explain:"Zuerst „vermindert um 6“ → (x − 6), dann „verdoppelt“ → 2·(x − 6)."},
     {type:"input", q:"Setze x = −2 in den Term x² + 3 ein. Wie lautet der Wert?", answer:"7",
-      explain:"(−2)² + 3 = 4 + 3 = 7. Achtung: Minus mal Minus ergibt Plus!"}
+      explain:"(−2)² + 3 = 4 + 3 = 7. Achtung: Minus mal Minus ergibt Plus!"},
+    {type:"mc", q:"Welcher Term passt zu: „Die Hälfte einer Zahl, vermehrt um 7“?", options:["x/2 + 7","7x/2","(x + 7)/2","2x + 7"], correct:0,
+      explain:"Zuerst die Hälfte bilden: x/2, danach „vermehrt um 7“, also + 7."},
+    {type:"input", q:"Berechne den Wert des Terms 3x + 4 für x = 5.", answer:"19",
+      explain:"3·5 + 4 = 15 + 4 = 19."},
+    {type:"mc", q:"Übersetze: „Das Doppelte der Summe aus einer Zahl und 3“", options:["2(x + 3)","2x + 3","x + 3 + 2","3x + 2"], correct:0,
+      explain:"Zuerst die Summe bilden: (x + 3), dann verdoppeln: 2·(x + 3)."}
   ]
 },
 {
@@ -409,7 +415,13 @@ const LESSONS = [
     {type:"mc", q:"Welche zwei Terme sind gleichartig (dürfen zusammengefasst werden)?", options:["3x² und 5x²","3x und 3x²","3x und 3y","3x² und 3y²"], correct:0,
       explain:"Gleichartig bedeutet: gleiche Variable UND gleicher Exponent. Nur 3x² und 5x² erfüllen das."},
     {type:"mc", q:"6x − (2x + 3) vereinfacht ergibt:", options:["4x − 3","4x + 3","8x − 3","4x − 6"], correct:0,
-      explain:"Minus vor der Klammer dreht beide Vorzeichen um: 6x − 2x − 3 = 4x − 3."}
+      explain:"Minus vor der Klammer dreht beide Vorzeichen um: 6x − 2x − 3 = 4x − 3."},
+    {type:"input", q:"9x − 4x = ___ x. Welche Zahl kommt vor dem x?", answer:"5",
+      explain:"9 − 4 = 5, also 9x − 4x = 5x."},
+    {type:"mc", q:"3a + 2b − 5a + b vereinfacht ergibt:", options:["−2a + 3b","8a + 3b","−2a − 3b","2a + 3b"], correct:0,
+      explain:"a-Glieder: 3a − 5a = −2a. b-Glieder: 2b + b = 3b → −2a + 3b."},
+    {type:"mc", q:"8y − (3y − 2) vereinfacht ergibt:", options:["5y + 2","5y − 2","11y − 2","5y + 5"], correct:0,
+      explain:"Minus vor der Klammer dreht beide Vorzeichen um: 8y − 3y + 2 = 5y + 2."}
   ]
 },
 {
@@ -433,7 +445,13 @@ const LESSONS = [
     {type:"mc", q:"Klammere aus: 6x + 9 = ?", options:["3(2x + 3)","2(3x + 9)","6(x + 9)","3(2x + 9)"], correct:0,
       explain:"Größter gemeinsamer Teiler von 6 und 9 ist 3: 6x+9 = 3·2x + 3·3 = 3(2x+3)."},
     {type:"mc", q:"−(4x − 7) = ?", options:["−4x + 7","−4x − 7","4x − 7","4x + 7"], correct:0,
-      explain:"Das Minus vor der Klammer dreht beide Vorzeichen um: −4x + 7."}
+      explain:"Das Minus vor der Klammer dreht beide Vorzeichen um: −4x + 7."},
+    {type:"mc", q:"3(x − 4) = ?", options:["3x − 12","3x − 4","3x + 12","x − 12"], correct:0,
+      explain:"3·x − 3·4 = 3x − 12."},
+    {type:"mc", q:"Klammere aus: 10x − 15 = ?", options:["5(2x − 3)","5(2x − 15)","10(x − 15)","2(5x − 3)"], correct:0,
+      explain:"Größter gemeinsamer Teiler von 10 und 15 ist 5: 10x − 15 = 5·2x − 5·3 = 5(2x − 3)."},
+    {type:"mc", q:"−3(2x − 4) = ?", options:["−6x + 12","−6x − 12","6x − 12","−6x + 4"], correct:0,
+      explain:"−3·2x = −6x und −3·(−4) = +12 → −6x + 12."}
   ]
 },
 {
@@ -459,7 +477,13 @@ const LESSONS = [
     {type:"mc", q:"Welcher Buchstabe ist punktsymmetrisch?", options:["S","A","T","M"], correct:0,
       explain:"Dreht man das S um 180° um seinen Mittelpunkt, sieht es genauso aus."},
     {type:"input", q:"Ein gleichseitiges Dreieck hat wie viele Symmetrieachsen?", answer:"3",
-      explain:"Jede der drei Achsen verläuft von einer Ecke zur Mitte der gegenüberliegenden Seite."}
+      explain:"Jede der drei Achsen verläuft von einer Ecke zur Mitte der gegenüberliegenden Seite."},
+    {type:"mc", q:"Ein Rechteck (das kein Quadrat ist) hat wie viele Symmetrieachsen?", options:["2","4","1","0"], correct:0,
+      explain:"Ein Rechteck hat zwei Symmetrieachsen: jeweils durch die Mitten der gegenüberliegenden Seiten."},
+    {type:"mc", q:"Welcher Buchstabe ist achsensymmetrisch (bei normaler Schreibweise)?", options:["A","S","Z","N"], correct:0,
+      explain:"Das A hat eine senkrechte Spiegelachse in der Mitte."},
+    {type:"mc", q:"Ein Kreis ist …", options:["achsensymmetrisch und punktsymmetrisch","nur achsensymmetrisch","nur punktsymmetrisch","weder noch"], correct:0,
+      explain:"Ein Kreis hat unendlich viele Symmetrieachsen durch den Mittelpunkt und ist zugleich punktsymmetrisch zu seinem Mittelpunkt."}
   ]
 },
 {
@@ -483,7 +507,13 @@ const LESSONS = [
     {type:"input", q:"Ein Dreieck hat die Innenwinkel 50° und 60°. Wie groß ist der dritte Winkel (nur Zahl)?", answer:"70",
       explain:"180 − 50 − 60 = 70."},
     {type:"mc", q:"Wechselwinkel an geschnittenen Parallelen sind …", options:["gleich groß","ergänzen sich zu 180°","immer 90°","ergänzen sich zu 90°"], correct:0,
-      explain:"Wechselwinkel liegen auf entgegengesetzten Seiten zwischen den Parallelen und sind gleich groß."}
+      explain:"Wechselwinkel liegen auf entgegengesetzten Seiten zwischen den Parallelen und sind gleich groß."},
+    {type:"input", q:"Zwei Geraden schneiden sich, ein Winkel ist 48°. Wie groß ist sein Nebenwinkel (nur Zahl)?", answer:"132",
+      explain:"180 − 48 = 132."},
+    {type:"input", q:"Ein Dreieck hat die Innenwinkel 35° und 85°. Wie groß ist der dritte Winkel (nur Zahl)?", answer:"60",
+      explain:"180 − 35 − 85 = 60."},
+    {type:"mc", q:"Stufenwinkel entstehen an …", options:["zwei Parallelen, geschnitten von einer dritten Geraden","zwei beliebig sich schneidenden Geraden","einem Dreieck","einem Kreis"], correct:0,
+      explain:"Stufenwinkel treten auf, wenn zwei parallele Geraden von einer weiteren Geraden (Transversale) geschnitten werden."}
   ]
 },
 {
@@ -499,7 +529,10 @@ const LESSONS = [
     {type:"input", q:"Löse: 3x = 21", answer:"7", explain:"x = 21 : 3 = 7."},
     {type:"input", q:"Löse: 2x + 4 = 14", answer:"5", explain:"2x = 10, x = 5."},
     {type:"input", q:"Löse: 5x − 3 = 17", answer:"4", explain:"5x = 20, x = 4."},
-    {type:"input", q:"Löse: 4(x + 2) = 20", answer:"3", explain:"x + 2 = 5, also x = 3."}
+    {type:"input", q:"Löse: 4(x + 2) = 20", answer:"3", explain:"x + 2 = 5, also x = 3."},
+    {type:"input", q:"Löse: x − 9 = 6", answer:"15", explain:"x = 6 + 9 = 15."},
+    {type:"input", q:"Löse: 6x + 2 = 26", answer:"4", explain:"6x = 24, x = 4."},
+    {type:"input", q:"Löse: 3(x − 1) = 12", answer:"5", explain:"x − 1 = 4, also x = 5."}
   ]
 },
 {
@@ -514,7 +547,10 @@ const LESSONS = [
     {type:"input", q:"Das Dreifache einer Zahl, vermindert um 4, ergibt 11. Wie lautet die Zahl?", answer:"5", explain:"3x − 4 = 11 → 3x = 15 → x = 5."},
     {type:"input", q:"Anna hat doppelt so viele Sticker wie Ben. Zusammen haben sie 36 Sticker. Wie viele Sticker hat Ben?", answer:"12", explain:"x + 2x = 36 → 3x = 36 → x = 12."},
     {type:"input", q:"Ein Rechteck ist 3 cm länger als breit. Der Umfang beträgt 26 cm. Wie breit ist es (in cm)?", answer:"5", explain:"2·(b + (b+3)) = 26 → 4b + 6 = 26 → 4b = 20 → b = 5."},
-    {type:"input", q:"Die Summe von drei aufeinanderfolgenden Zahlen ist 63. Wie lautet die kleinste der drei Zahlen?", answer:"20", explain:"x + (x+1) + (x+2) = 63 → 3x + 3 = 63 → x = 20."}
+    {type:"input", q:"Die Summe von drei aufeinanderfolgenden Zahlen ist 63. Wie lautet die kleinste der drei Zahlen?", answer:"20", explain:"x + (x+1) + (x+2) = 63 → 3x + 3 = 63 → x = 20."},
+    {type:"input", q:"Eine Zahl mal 4, vermindert um 5, ergibt 27. Wie lautet die Zahl?", answer:"8", explain:"4x − 5 = 27 → 4x = 32 → x = 8."},
+    {type:"input", q:"Lena ist 4 Jahre jünger als Paul. Zusammen sind sie 30 Jahre alt. Wie alt ist Lena?", answer:"13", explain:"x + (x+4) = 30 → 2x = 26 → x = 13."},
+    {type:"input", q:"Die Summe zweier Zahlen ist 40. Die eine Zahl ist dreimal so groß wie die andere. Wie groß ist die kleinere Zahl?", answer:"10", explain:"x + 3x = 40 → 4x = 40 → x = 10."}
   ]
 },
 {
@@ -530,7 +566,10 @@ const LESSONS = [
     {type:"input", q:"Berechne 10% von 90.", answer:"9", explain:"90 · 10/100 = 9."},
     {type:"input", q:"40 ist wie viel Prozent von 200? (nur die Zahl, ohne %)", answer:"20", explain:"40/200 · 100 = 20%."},
     {type:"input", q:"15% einer Zahl sind 30. Wie groß ist die Zahl (der Grundwert)?", answer:"200", explain:"G = 30 : (15/100) = 30 : 0,15 = 200."},
-    {type:"input", q:"Ein Pulli kostet 40 €. Im Sale gibt es 25% Rabatt. Wie viele Euro spart man?", answer:"10", explain:"40 · 25/100 = 10 €."}
+    {type:"input", q:"Ein Pulli kostet 40 €. Im Sale gibt es 25% Rabatt. Wie viele Euro spart man?", answer:"10", explain:"40 · 25/100 = 10 €."},
+    {type:"input", q:"Berechne 60% von 50.", answer:"30", explain:"50 · 60/100 = 30."},
+    {type:"input", q:"12 ist wie viel Prozent von 60? (nur die Zahl, ohne %)", answer:"20", explain:"12/60 · 100 = 20%."},
+    {type:"input", q:"20% einer Zahl sind 16. Wie groß ist die Zahl?", answer:"80", explain:"G = 16 : (20/100) = 16 : 0,2 = 80."}
   ]
 },
 {
@@ -546,7 +585,10 @@ const LESSONS = [
     {type:"input", q:"Kapital 500 €, Zinssatz 2% pro Jahr, Laufzeit 3 Jahre (einfache Verzinsung). Wie viele Euro Zinsen insgesamt?", answer:"30", explain:"500 · 2/100 = 10 € pro Jahr, mal 3 Jahre = 30 €."},
     {type:"input", q:"Ein Preis von 80 € wird um 20% erhöht. Wie hoch ist der neue Preis in Euro?", answer:"96", explain:"80 · 1,2 = 96 €."},
     {type:"input", q:"Ein Preis wurde um 10% gesenkt und beträgt jetzt 90 €. Wie hoch war der ursprüngliche Preis in Euro?", answer:"100", explain:"90 = G · 0,9 → G = 90 : 0,9 = 100 €."},
-    {type:"input", q:"Eine Stadt hat 5000 Einwohner. Die Bevölkerung wächst um 6%. Wie viele Einwohner sind es danach?", answer:"5300", explain:"5000 · 1,06 = 5300."}
+    {type:"input", q:"Eine Stadt hat 5000 Einwohner. Die Bevölkerung wächst um 6%. Wie viele Einwohner sind es danach?", answer:"5300", explain:"5000 · 1,06 = 5300."},
+    {type:"input", q:"Kapital 1500 €, Zinssatz 2% pro Jahr. Wie viele Euro Zinsen nach einem Jahr?", answer:"30", explain:"1500 · 2/100 = 30 €."},
+    {type:"input", q:"Ein Preis von 50 € wird um 10% gesenkt. Wie hoch ist der neue Preis in Euro?", answer:"45", explain:"50 · 0,9 = 45 €."},
+    {type:"input", q:"Kapital 800 €, Zinssatz 5% pro Jahr, Laufzeit 2 Jahre (einfache Verzinsung). Wie viele Euro Zinsen insgesamt?", answer:"80", explain:"800 · 5/100 = 40 € pro Jahr, mal 2 Jahre = 80 €."}
   ]
 },
 {
@@ -564,7 +606,13 @@ const LESSONS = [
     {type:"input", q:"Werte: 3, 7, 7, 9. Wie groß ist der Median?", answer:"7", explain:"Gerade Anzahl: Mittelwert der beiden mittleren Werte (7 und 7) = 7."},
     {type:"input", q:"Werte: 2, 5, 9, 3, 11. Wie groß ist die Spannweite?", answer:"9", explain:"Größter Wert (11) − kleinster Wert (2) = 9."},
     {type:"mc", q:"Was zeigt ein klassischer Boxplot NICHT direkt an?", options:["Arithmetisches Mittel","Minimum und Maximum","Median","Quartile"], correct:0,
-      explain:"Ein Boxplot zeigt Minimum, Q1, Median, Q3 und Maximum – den Mittelwert zeigt er in der Regel nicht."}
+      explain:"Ein Boxplot zeigt Minimum, Q1, Median, Q3 und Maximum – den Mittelwert zeigt er in der Regel nicht."},
+    {type:"input", q:"Werte: 5, 5, 6, 8, 10, 14. Wie groß ist der Median (gerade Anzahl von Werten)?", answer:"7",
+      explain:"Sortiert sind die beiden mittleren Werte 6 und 8. Median = (6+8) : 2 = 7."},
+    {type:"input", q:"Werte: 2, 4, 4, 6, 9. Wie groß ist das arithmetische Mittel?", answer:"5",
+      explain:"(2+4+4+6+9) : 5 = 25 : 5 = 5."},
+    {type:"input", q:"Werte: 12, 15, 9, 20, 11. Wie groß ist die Spannweite?", answer:"11",
+      explain:"Größter Wert (20) − kleinster Wert (9) = 11."}
   ]
 },
 {
@@ -582,7 +630,13 @@ const LESSONS = [
     {type:"mc", q:"Gegeben sind eine Seite und die beiden anliegenden Winkel. Welcher Kongruenzsatz?", options:["WSW","SSS","SWS","SSW"], correct:0, explain:"Winkel-Seite-Winkel → WSW."},
     {type:"mc", q:"Wenn nur die drei Winkel eines Dreiecks bekannt sind (WWW), ist das Dreieck eindeutig festgelegt.", options:["Wahr","Falsch"], correct:1,
       explain:"WWW legt nur die Form fest, nicht die Größe – es gibt unendlich viele ähnliche Dreiecke mit denselben Winkeln."},
-    {type:"mc", q:"Gegeben sind zwei Seiten und der Winkel gegenüber der größeren Seite. Welcher Kongruenzsatz?", options:["SSW","SSS","SWS","WSW"], correct:0, explain:"Das ist genau die Bedingung für SSW (SsW)."}
+    {type:"mc", q:"Gegeben sind zwei Seiten und der Winkel gegenüber der größeren Seite. Welcher Kongruenzsatz?", options:["SSW","SSS","SWS","WSW"], correct:0, explain:"Das ist genau die Bedingung für SSW (SsW)."},
+    {type:"mc", q:"Zwei Dreiecke stimmen in allen drei Seiten überein. Sind sie kongruent?", options:["Ja, nach SSS","Nein, das reicht nicht","Nur wenn auch die Winkel übereinstimmen","Nur bei rechtwinkligen Dreiecken"], correct:0,
+      explain:"Der Kongruenzsatz SSS besagt genau das: Stimmen alle drei Seiten überein, sind die Dreiecke kongruent."},
+    {type:"mc", q:"Welche Buchstabenfolge beschreibt: zwei Winkel und die dazwischenliegende Seite bekannt?", options:["WSW","SWS","SSW","SSS"], correct:0,
+      explain:"Winkel-Seite-Winkel: die Seite liegt zwischen den beiden bekannten Winkeln."},
+    {type:"mc", q:"Reicht die Angabe von nur zwei Seiten (ohne Winkel) aus, um ein Dreieck eindeutig festzulegen?", options:["Nein","Ja, immer","Ja, aber nur bei gleichschenkligen Dreiecken","Ja, aber nur bei rechtwinkligen Dreiecken"], correct:0,
+      explain:"Zwei Seiten allein legen das Dreieck nicht eindeutig fest – der eingeschlossene Winkel kann unterschiedlich groß sein."}
   ]
 },
 {
@@ -599,7 +653,13 @@ const LESSONS = [
     {type:"mc", q:"Wo schneiden sich die drei Winkelhalbierenden eines Dreiecks?", options:["Inkreismittelpunkt","Umkreismittelpunkt","Schwerpunkt","Höhenschnittpunkt"], correct:0, explain:"Der Inkreismittelpunkt hat von allen drei Seiten den gleichen Abstand."},
     {type:"mc", q:"Was macht eine Winkelhalbierende?", options:["Teilt einen Winkel in zwei gleich große Teile","Halbiert eine Seite","Steht senkrecht auf einer Seite","Verbindet zwei Seitenmitten"], correct:0, explain:"Der Name sagt es direkt: sie halbiert einen Winkel."},
     {type:"mc", q:"Der Umkreis eines Dreiecks geht durch …", options:["alle drei Eckpunkte","alle drei Seitenmitten","den Schwerpunkt","nur zwei Eckpunkte"], correct:0, explain:"Der Umkreis verläuft durch alle drei Ecken des Dreiecks."},
-    {type:"mc", q:"Der Inkreis eines Dreiecks berührt …", options:["alle drei Seiten","alle drei Eckpunkte","nur eine Seite","die Mittelsenkrechten"], correct:0, explain:"Der Inkreis liegt innen und berührt jede der drei Seiten genau einmal."}
+    {type:"mc", q:"Der Inkreis eines Dreiecks berührt …", options:["alle drei Seiten","alle drei Eckpunkte","nur eine Seite","die Mittelsenkrechten"], correct:0, explain:"Der Inkreis liegt innen und berührt jede der drei Seiten genau einmal."},
+    {type:"mc", q:"Welche Linie verbindet eine Ecke rechtwinklig mit der gegenüberliegenden Seite (oder deren Verlängerung)?", options:["Höhe","Mittelsenkrechte","Winkelhalbierende","Seitenhalbierende"], correct:0,
+      explain:"Das ist genau die Definition der Höhe."},
+    {type:"mc", q:"Wie viele Winkelhalbierende hat ein Dreieck?", options:["3","1","2","6"], correct:0,
+      explain:"Jedes Dreieck hat drei Innenwinkel, also auch drei Winkelhalbierende."},
+    {type:"mc", q:"Der Radius des Umkreises ist der Abstand vom Umkreismittelpunkt zu …", options:["jedem der drei Eckpunkte","jeder der drei Seiten","dem Schwerpunkt","der längsten Seite"], correct:0,
+      explain:"Der Umkreismittelpunkt ist von allen drei Eckpunkten gleich weit entfernt – dieser Abstand ist der Umkreisradius."}
   ]
 },
 {
@@ -615,7 +675,13 @@ const LESSONS = [
     {type:"mc", q:"Ein Dreieck ABC hat bei C einen rechten Winkel. Auf welcher besonderen Linie liegt C?", options:["Auf dem Thaleskreis über AB","Auf der Mittelsenkrechten von AB","Auf der Winkelhalbierenden bei A","Auf der Höhe von B"], correct:0, explain:"Das ist die Umkehrung des Satzes des Thales."},
     {type:"mc", q:"Jeder Punkt auf einem Halbkreis über einer Strecke AB sieht diese Strecke unter einem 90°-Winkel.", options:["Wahr","Falsch"], correct:0, explain:"Genau das besagt der Satz des Thales."},
     {type:"mc", q:"Um ein rechtwinkliges Dreieck mit rechtem Winkel bei C zu konstruieren, zeichnet man zuerst …", options:["den Thaleskreis über AB","die Winkelhalbierende von A","den Inkreis","eine beliebige Gerade durch A"], correct:0, explain:"C wird dann irgendwo auf diesem Kreis gewählt – der Winkel bei C ist automatisch 90°."},
-    {type:"mc", q:"Der Mittelpunkt des Thaleskreises liegt …", options:["genau in der Mitte der Strecke AB","bei Punkt A","bei Punkt C","außerhalb der Strecke AB"], correct:0, explain:"Der Durchmesser des Thaleskreises ist die Strecke AB, sein Mittelpunkt liegt daher genau in deren Mitte."}
+    {type:"mc", q:"Der Mittelpunkt des Thaleskreises liegt …", options:["genau in der Mitte der Strecke AB","bei Punkt A","bei Punkt C","außerhalb der Strecke AB"], correct:0, explain:"Der Durchmesser des Thaleskreises ist die Strecke AB, sein Mittelpunkt liegt daher genau in deren Mitte."},
+    {type:"mc", q:"Der Thaleskreis über einer Strecke AB ist …", options:["ein Kreis mit Durchmesser AB","ein Kreis mit Radius AB","ein Kreis durch nur einen Punkt","ein Quadrat über AB"], correct:0,
+      explain:"Der Thaleskreis hat die Strecke AB als Durchmesser."},
+    {type:"mc", q:"Wahr oder falsch: Ein Punkt, der NICHT auf dem Thaleskreis über AB liegt, kann trotzdem einen rechten Winkel bei diesem Punkt zu AB bilden.", options:["Falsch","Wahr"], correct:0,
+      explain:"Nach der Umkehrung des Satzes des Thales liegt jeder Punkt mit rechtem Winkel zu AB zwingend auf dem Thaleskreis."},
+    {type:"input", q:"Die Strecke AB ist 8 cm lang und ist der Durchmesser eines Thaleskreises. Wie groß ist der Radius (in cm, nur Zahl)?", answer:"4",
+      explain:"Der Radius ist die Hälfte des Durchmessers: 8 : 2 = 4."}
   ]
 },
 {
@@ -630,7 +696,10 @@ const LESSONS = [
     {type:"mc", q:"Nur die drei Winkel α = 50°, β = 60°, γ = 70° sind gegeben. Ist das Dreieck eindeutig konstruierbar?", options:["Ja","Nein"], correct:1, explain:"WWW legt nur die Form fest – die Größe bleibt offen, es ist nicht eindeutig konstruierbar."},
     {type:"mc", q:"Zwei Seiten und der eingeschlossene Winkel sind gegeben. Eindeutig konstruierbar?", options:["Ja (SWS)","Nein"], correct:0, explain:"Das entspricht genau dem Kongruenzsatz SWS."},
     {type:"mc", q:"Nur ein Winkel und eine Seite sind gegeben (sonst nichts). Eindeutig konstruierbar?", options:["Ja","Nein"], correct:1, explain:"Das reicht für keinen der vier Kongruenzsätze – es gibt viele passende Dreiecke."},
-    {type:"mc", q:"Eine Seite und die beiden anliegenden Winkel sind gegeben. Eindeutig konstruierbar?", options:["Ja (WSW)","Nein"], correct:0, explain:"Das ist der Kongruenzsatz WSW."}
+    {type:"mc", q:"Eine Seite und die beiden anliegenden Winkel sind gegeben. Eindeutig konstruierbar?", options:["Ja (WSW)","Nein"], correct:0, explain:"Das ist der Kongruenzsatz WSW."},
+    {type:"mc", q:"a = 4 cm, b = 3 cm sind gegeben, dazu der von ihnen eingeschlossene Winkel γ = 90°. Eindeutig konstruierbar?", options:["Ja (SWS)","Nein"], correct:0, explain:"Zwei Seiten und der eingeschlossene Winkel bekannt → SWS."},
+    {type:"mc", q:"Nur zwei Seiten sind gegeben, aber kein Winkel. Eindeutig konstruierbar?", options:["Nein","Ja"], correct:0, explain:"Ohne einen bekannten Winkel reicht die Angabe von zwei Seiten nicht für einen Kongruenzsatz."},
+    {type:"mc", q:"Drei Seiten mit den Längen 3 cm, 4 cm und 5 cm sind gegeben. Eindeutig konstruierbar?", options:["Ja (SSS)","Nein"], correct:0, explain:"Alle drei Seiten bekannt → SSS, eindeutig konstruierbar (hier sogar ein rechtwinkliges Dreieck, da 3² + 4² = 5²)."}
   ]
 }
 ];
@@ -662,9 +731,12 @@ function go(view, opts={}){
 function startLesson(id){
   go("lessonIntro", {lessonId:id});
 }
+const QUIZ_LENGTH = 5; // Anzahl der Aufgaben pro Durchlauf, aus dem größeren Fragenpool der Lektion gezogen
+
 function startQuiz(id){
   const lesson = getLesson(id);
-  const quizQuestions = lesson.questions.map(shuffleOptions);
+  const pick = Math.min(QUIZ_LENGTH, lesson.questions.length);
+  const quizQuestions = shuffle(lesson.questions).slice(0, pick).map(shuffleOptions);
   go("quiz", {lessonId:id, quizQuestions, qIndex:0, score:0, answered:false, selected:null});
 }
 function selectOption(i){
@@ -870,7 +942,7 @@ function renderLessonIntro(){
   <div class="card" style="--accent:${ch.color}">
     <div class="eyebrow" style="color:${ch.color};text-transform:uppercase;font-weight:700;font-size:.75rem;letter-spacing:.05em;">${ch.title}</div>
     <h2 style="margin:6px 0 4px;">${ch.icon} ${lesson.title}</h2>
-    <div class="meta" style="color:var(--muted);font-size:.85rem;margin-bottom:12px;">${lesson.time} · ${lesson.questions.length} Aufgaben</div>
+    <div class="meta" style="color:var(--muted);font-size:.85rem;margin-bottom:12px;">${lesson.time} · ${Math.min(QUIZ_LENGTH, lesson.questions.length)} Aufgaben (zufällig aus einem größeren Aufgabenpool)</div>
     <p style="line-height:1.55;">${lesson.intro}</p>
   `;
   lesson.merksaetze.forEach(m=>{
@@ -937,7 +1009,7 @@ function renderQuiz(){
 function renderResult(){
   const lesson = getLesson(state.lessonId);
   const ch = getChapter(lesson.chapter);
-  const total = lesson.questions.length;
+  const total = state.quizQuestions.length;
   const score = state.score;
   const pct = score/total;
   let emoji, msg;
@@ -1079,6 +1151,15 @@ function attachHandlers(){
 }
 
 render();
+
+// Service Worker registrieren, damit die App auch offline (ohne Internet) startet.
+// Funktioniert nur, wenn die Datei über https:// (z.B. GitHub Pages) aufgerufen wird,
+// nicht bei einer lokal geöffneten Datei.
+if("serviceWorker" in navigator){
+  window.addEventListener("load", ()=>{
+    navigator.serviceWorker.register("./sw.js").catch(()=>{});
+  });
+}
 </script>
 </body>
 </html>

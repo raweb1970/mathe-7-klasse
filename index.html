@@ -663,7 +663,9 @@ function startLesson(id){
   go("lessonIntro", {lessonId:id});
 }
 function startQuiz(id){
-  go("quiz", {lessonId:id, qIndex:0, score:0, answered:false, selected:null});
+  const lesson = getLesson(id);
+  const quizQuestions = lesson.questions.map(shuffleOptions);
+  go("quiz", {lessonId:id, quizQuestions, qIndex:0, score:0, answered:false, selected:null});
 }
 function selectOption(i){
   if(state.answered) return;
@@ -685,8 +687,7 @@ function isCorrectAnswer(q, val){
   return normalize(val) === normalize(q.answer);
 }
 function checkAnswer(val){
-  const lesson = getLesson(state.lessonId);
-  const q = lesson.questions[state.qIndex];
+  const q = state.quizQuestions[state.qIndex];
   const isCorrect = isCorrectAnswer(q, val);
   state.answered = true;
   state.lastCorrect = isCorrect;
@@ -695,8 +696,7 @@ function checkAnswer(val){
   render();
 }
 function nextQuestion(){
-  const lesson = getLesson(state.lessonId);
-  if(state.qIndex < lesson.questions.length - 1){
+  if(state.qIndex < state.quizQuestions.length - 1){
     state.qIndex++;
     state.answered = false;
     state.selected = null;
@@ -722,13 +722,22 @@ function shuffle(arr){
   }
   return a;
 }
+// Mischt bei Multiple-Choice-Fragen die Reihenfolge der Antwortmöglichkeiten,
+// damit die richtige Antwort nicht immer an derselben Stelle steht.
+function shuffleOptions(q){
+  if(q.type !== "mc") return q;
+  const order = shuffle(q.options.map((_,i)=>i));
+  const newOptions = order.map(i=>q.options[i]);
+  const newCorrect = order.indexOf(q.correct);
+  return Object.assign({}, q, {options:newOptions, correct:newCorrect});
+}
 function buildSchulaufgabe(chapterId){
   const lessons = chapterLessons(chapterId);
   const perLesson = lessons.length <= 1 ? 5 : 3;
   let pool = [];
   lessons.forEach(l=>{
     const picked = shuffle(l.questions).slice(0, Math.min(perLesson, l.questions.length));
-    picked.forEach(q=> pool.push(Object.assign({}, q, {lessonTitle:l.title})));
+    picked.forEach(q=> pool.push(Object.assign({}, shuffleOptions(q), {lessonTitle:l.title})));
   });
   return shuffle(pool);
 }
@@ -884,8 +893,8 @@ function renderLessonIntro(){
 function renderQuiz(){
   const lesson = getLesson(state.lessonId);
   const ch = getChapter(lesson.chapter);
-  const q = lesson.questions[state.qIndex];
-  const total = lesson.questions.length;
+  const q = state.quizQuestions[state.qIndex];
+  const total = state.quizQuestions.length;
   const pct = Math.round(((state.qIndex) / total) * 100);
   let html = `<div class="card" style="--accent:${ch.color}">
     <div class="progress-bar"><div class="fill" style="width:${pct}%"></div></div>
